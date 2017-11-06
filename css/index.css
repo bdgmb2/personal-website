@@ -43,17 +43,6 @@ body {
     color: #333333;
 }
 
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    margin-top: 1em;
-    animation: slide-fromTop 1.5s;
-}
-header h1 { margin-right: 2em; margin-left: 10%; display: inline-block; font-family: "Highway Gothic Wide", sans-serif; }
-.n1 { font-size: 2.5em; font-family: inherit; }
-.n2 { color: #29ABE2; font-size: 2.5em; margin-left: 0.25em; font-family: inherit; }
-
 nav a {
     background: rgba(255, 255, 255, 1);
     padding: 0.75em 1.25em;
@@ -71,6 +60,30 @@ nav {
     width: 15%;
     animation: slide-fromRight 1.5s;
 }
+nav .mobile-dropdown {
+    background-color: #666666;
+    display: inline-block;
+}
+nav .mobile-rect {
+    width: 2em;
+    height: 0.1em;
+    background-color: white;
+    margin: 0.3em 0.5em;
+}
+nav .mobile-dropdown :first-child { margin-top: 0.75em; }
+nav .mobile-dropdown :last-child { margin-bottom: 0.75em; }
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 1em;
+    animation: slide-fromTop 1.5s;
+}
+header h1 { margin-right: 2em; margin-left: 10%; display: inline-block; font-family: "Highway Gothic Wide", sans-serif; }
+.n1 { font-size: 2.5em; font-family: inherit; }
+.n2 { color: #29ABE2; font-size: 2.5em; margin-left: 0.25em; font-family: inherit; }
 
 main {
     width: 90%;
@@ -116,16 +129,12 @@ footer p {
 
 @media screen and (max-width: 1023px) {
     .n2 { margin-left: 0; }
-    nav .mobile-dropdown {
-        background-color: #666666;
-        display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    header p { margin-left: 10%; }
+    .view-container {
+        display: flex;
+        align-items: center;
     }
-    nav .mobile-rect {
-        width: 2em;
-        height: 0.1em;
-        background-color: white;
-        margin: 0.3em 0.5em;
-    }
-    nav .mobile-dropdown :first-child { margin-top: 0.75em; }
-    nav .mobile-dropdown :last-child { margin-bottom: 0.75em; }
 }
