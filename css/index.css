@@ -20,7 +20,6 @@
 
 .header-video {
     margin: 2em 0;
-    width: 50%;
     height: 300px;
     background-color: #666;
     margin-left: auto;
@@ -113,4 +112,20 @@ footer p {
     text-align: center;
     color: white;
     padding: 2em 0;
+}
+
+@media screen and (max-width: 1023px) {
+    .n2 { margin-left: 0; }
+    nav .mobile-dropdown {
+        background-color: #666666;
+        display: inline-block;
+    }
+    nav .mobile-rect {
+        width: 2em;
+        height: 0.1em;
+        background-color: white;
+        margin: 0.3em 0.5em;
+    }
+    nav .mobile-dropdown :first-child { margin-top: 0.75em; }
+    nav .mobile-dropdown :last-child { margin-bottom: 0.75em; }
 }
