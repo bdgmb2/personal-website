@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "Highway Gothic Wide";
+    src: url("HighwayGothicWide.ttf");
+}
+
+@keyframes slide-fromTop {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slide-fromRight {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-fromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.header-video {
+    margin: 2em 0;
+    width: 50%;
+    height: 300px;
+    background-color: #666;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-video h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Highway Gothic", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: #fefdfb;
+    color: #333333;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin-top: 1em;
+    animation: slide-fromTop 1.5s;
+}
+header h1 { margin-right: 2em; margin-left: 10%; display: inline-block; font-family: "Highway Gothic Wide", sans-serif; }
+.n1 { font-size: 2.5em; font-family: inherit; }
+.n2 { color: #29ABE2; font-size: 2.5em; margin-left: 0.25em; font-family: inherit; }
+
+nav a {
+    background: rgba(255, 255, 255, 1);
+    padding: 0.75em 1.25em;
+    margin: 0.25em 0;
+    text-align: center;
+    color: #999;
+    text-decoration: none;
+    display: block;
+}
+nav ul { list-style: none; }
+nav {
+    position: absolute;
+    float: right;
+    left: 85%;
+    width: 15%;
+    animation: slide-fromRight 1.5s;
+}
+
+main {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: calc(90vh - 100px);
+}
+
+.view-buttons {
+    padding: 1em 0;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.view-buttons a {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0;
+    border-radius: 1.5em;
+    color: white;
+    margin: 0 auto;
+}
+
+.view-buttons a i {
+    margin-left: 0.5em;
+}
+
+#github { background-color: #333333; }
+#resume { background-color: #0F81CC; }
+
+footer {
+    background-color: #777777;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    padding: 2em 0;
+}
