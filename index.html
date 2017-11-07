@@ -1,50 +1,29 @@
 <!DOCTYPE html>
-<!--
-   Well SOMEONE's a little nosy.
-                                   ___
-                               ,-""   `.
-                             ,'  _   e )`-._
-                            /  ,' `-._<.===-'
-                           /  /
-                          /  ;
-              _.--.__    /   ;
- (`._    _.-""       "--'    |
- <_  `-""                     \
-  <`-                          :
-   (__   <__.                  ;
-     `-.   '-.__.      _.'    /
-        \      `-.__,-'    _,'
-         `._    ,    /__,-'
-            ""._\__,'< <____
-                 | |  `----.`.
-                 | |        \ `.
-                 ; |___      \-``
-                 \   --<
-                  `.`.<
-                   `-'
--->
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width; initial-scale=1" />
-    <title>Ben Giles</title>
+    <title>Ben Giles - Software Developer</title>
+    <meta name="description" content="Ben Giles is a software developer and student studying at the Missouri University of Science and Technology." />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </head>
 <body>
     <div class="view-container">
-        <nav role="navigation">
+        <nav>
             <div class="mobile-dropdown is-hidden-desktop">
                 <div class="mobile-rect"></div>
                 <div class="mobile-rect"></div>
                 <div class="mobile-rect"></div>
             </div>
             <ul class="is-hidden-touch">
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a data-scroll href="#about">About Me</a></li>
+                <li><a data-scroll href="#projects">Projects</a></li>
+                <li><a data-scroll href="#experience">Experience</a></li>
+                <li><a data-scroll href="#contact">Contact Me</a></li>
             </ul>
         </nav>
         <header>
@@ -52,26 +31,65 @@
             <p>Software Developer</p>
         </header>
     </div>
+    <section class="animated-text">
+        <h1>I can do...</h1>
+        <h1 id="typewrite" data-type='[
+             "Embedded Programming",
+             "Web Development",
+             "Infosec Analysis",
+             "Mobile Development",
+             "Design Briefs",
+             "Project Management"
+             ]'>
+            <span class="cursor"></span>
+        </h1>
+    </section>
     <main>
-        <div class="header-video"><h1>Video</h1></div>
         <section id="about">
-            <p>I'm Ben, a junior (3rd year) computer science student at the Missouri University of Science and Technology. I'm an embedded software developer, primarily working in C++, although my favorite language is C#.
-                Scroll down to see what I've worked on and what I like to think I'm good at.</p>
-            <div class="columns view-buttons">
-                <div class="column">
-                    <a id="github" href="https://github.com/bdgmb2">View my Github <i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
-                </div>
-                <div class="column">
-                    <a id="resume" href="/resume.pdf">Look at my Resume <i class="fa fa-2x fa-file-pdf-o" aria-hidden="true"></i></a>
-                </div>
+            <p>I'm Ben, a junior (3rd year) computer science student at the Missouri University of Science and Technology.
+                I'm an embedded software developer, primarily working in C++ and in a Linux environment, although I dabble
+                in web development and have worked a lot in C# and ASP.NET in the past. Scroll down to see what I've
+                worked on and what I like to think I'm good at.</p>
+            <div class="view-buttons">
+                <a id="github" href="https://github.com/bdgmb2">View my Github <i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
+                <a id="resume" href="/resume.pdf">Look at my Resume <i class="fa fa-2x fa-file-pdf-o" aria-hidden="true"></i></a>
             </div>
         </section>
-        <section id="projects"></section>
-        <section id="experience"></section>
-        <section id="contact"></section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <ul>
+                <li>
+                    <h1>MinerBytes Digital Signage</h1>
+                </li>
+                <li>
+                    <h1>Air EEEN</h1>
+                </li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h1>Experience</h1>
+            <p>In Chronological Order:</p>
+            <ul>
+                <li>
+                    <h1>IT Administrator at Big Country BG</h1>
+                </li>
+                <li>
+                    <h1>Student Technical Assistant at IT Research Support Services, Missouri S&amp;T</h1>
+                </li>
+                <li>
+                    <h1>Functional Analyst and Application Development Intern at the Boeing Company</h1>
+                </li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h1>Would You Like to Know More?</h1>
+        </section>
     </main>
     <footer>
         <p>&copy; 2017 Ben Giles</p>
+        <p><small>Animated Text from Simon Shahiveri</small></p>
+        <p><small>Icons from <a href="https://fontawesome.com">FontAwesome</a></small></p>
+        <p><small>Smooth Scrolling from Chris Ferdinandi</small></p>
     </footer>
 </body>
 </html>
