@@ -2,29 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width; initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ben Giles - Software Developer</title>
     <meta name="description" content="Ben Giles is a software developer and student studying at the Missouri University of Science and Technology." />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bulma.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="js/scroll.js"></script>
     <script type="text/javascript" src="js/site.js"></script>
+    <script type="text/javascript" src="js/tagcanvas.js"></script>
 </head>
 <body>
     <div class="view-container">
         <nav>
-            <div class="mobile-dropdown is-hidden-desktop">
+            <div id="mobile-nav">
                 <div class="mobile-rect"></div>
                 <div class="mobile-rect"></div>
                 <div class="mobile-rect"></div>
             </div>
-            <ul class="is-hidden-touch">
+            <ul id="desktop-nav">
                 <li><a data-scroll href="#about">About Me</a></li>
                 <li><a data-scroll href="#projects">Projects</a></li>
-                <li><a data-scroll href="#experience">Experience</a></li>
+                <li><a data-scroll href="#skills">Skills</a></li>
                 <li><a data-scroll href="#contact">Contact Me</a></li>
             </ul>
+            <div id="mobile-navwindow">
+                <ul>
+                    <li><a data-scroll href="#about">About Me</a></li>
+                    <li><a data-scroll href="#projects">Projects</a></li>
+                    <li><a data-scroll href="#skills">Skills</a></li>
+                    <li><a data-scroll href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
         </nav>
         <header>
             <h1><span class="n1">BEN</span>  <span class="n2">GILES</span></h1>
@@ -47,7 +55,7 @@
     <main>
         <section id="about">
             <p>I'm Ben, a junior (3rd year) computer science student at the Missouri University of Science and Technology.
-                I'm an embedded software developer, primarily working in C++ and in a Linux environment, although I dabble
+                I'm an embedded software developer, primarily working in C++ in a Linux environment, although I dabble
                 in web development and have worked a lot in C# and ASP.NET in the past. Scroll down to see what I've
                 worked on and what I like to think I'm good at.</p>
             <div class="view-buttons">
@@ -57,29 +65,39 @@
         </section>
         <section id="projects">
             <h1>Projects</h1>
-            <ul>
-                <li>
-                    <h1>MinerBytes Digital Signage</h1>
-                </li>
-                <li>
+            <div class="container">
+                <article>
+                    <h1>MinerBytes</h1>
+                    <p>A complex digital signage system in use at the Missouri University of Science and Technology. I developed the client software for this solution: a secure, lightweight native binary running on a Raspberry Pi that communicates with a REST API to serve content to a commerical display.</p>
+                    <a class="goto" href="https://minerbytes.mst.edu">View Project</a>
+                </article>
+                <article>
                     <h1>Air EEEN</h1>
-                </li>
-            </ul>
+                    <p>Originally starting out as a semester project for a university databases class, Air EEEN is a (fictional) airline website created with Laravel, and features flight booking, persistent accounts, realistic flight routes and an automated customer support phone system.</p>
+                    <a class="goto" href="https://bengiles.me/airline">View Project</a>
+                </article>
+            </div>
         </section>
-        <section id="experience">
-            <h1>Experience</h1>
-            <p>In Chronological Order:</p>
-            <ul>
-                <li>
-                    <h1>IT Administrator at Big Country BG</h1>
-                </li>
-                <li>
-                    <h1>Student Technical Assistant at IT Research Support Services, Missouri S&amp;T</h1>
-                </li>
-                <li>
-                    <h1>Functional Analyst and Application Development Intern at the Boeing Company</h1>
-                </li>
-            </ul>
+        <section id="skills">
+            <h1>Stuff I Can Do:</h1>
+            <canvas id="skillcloud">
+                <ul>
+                    <li><a>HTML</a></li>
+                    <li><a>CSS</a></li>
+                    <li><a>Javascript</a></li>
+                    <li><a>PHP</a></li>
+                    <li><a>Laravel</a></li>
+                    <li><a>Symfony</a></li>
+                    <li><a>C#</a></li>
+                    <li><a>ASP.NET</a></li>
+                    <li><a>Xamarin</a></li>
+                    <li><a>C++</a></li>
+                    <li><a>GTK+ Framework</a></li>
+                    <li><a>Python</a></li>
+                    <li><a>Amazon AWS</a></li>
+                    <li><a>Windows Server</a></li>
+                </ul>
+            </canvas>
         </section>
         <section id="contact">
             <h1>Would You Like to Know More?</h1>

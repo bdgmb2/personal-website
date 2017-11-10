@@ -40,6 +40,10 @@ TxtType.prototype.tick = function() {
     }, delta);
 };
 
+function onMobileClick() {
+    document.getElementById('mobile-navwindow').show();
+}
+
 window.onload = function() {
     var toRotate = document.getElementById('typewrite').getAttribute('data-type');
     if (toRotate) {
@@ -47,4 +51,13 @@ window.onload = function() {
     }
 
     var scroll = new SmoothScroll('a[href*="#"]');
+
+    TagCanvas.textColour = "#0F81CC";
+    TagCanvas.textFont = "Highway Gothic, sans-serif";
+    TagCanvas.txtScale = 3;
+    TagCanvas.zoom = 2;
+    TagCanvas.wheelZoom = false;
+    TagCanvas.Start('skillcloud');
+
+    document.getElementById('mobile-nav').click(onMobileClick);
 };

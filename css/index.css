@@ -18,24 +18,29 @@
     100% { transform: translateX(0); opacity: 1; }
 }
 
+/* GENERAL RULES (NOT SPECIFIC TO SCREEN SIZE) */
+
 * {
     margin: 0;
     padding: 0;
-    font-family: "Highway Gothic", sans-serif;
-    font-size: 20px;
 }
 
 body {
     /*background-color: #fefdfb;*/
-    background: url("/images/background.jpg");
+    background: url("../images/background.jpg");
     color: #333333;
     animation: fadeIn 2s;
+    font-size: 16px;
+    font-family: "Highway Gothic", sans-serif;
 }
+
+/* NAVIGATION */
 
 nav a {
     background: rgba(255, 255, 255, 0.5);
     padding: 0.6em 1.25em;
     margin: 0.25em 0;
+    font-size: 1.25em;
     text-align: center;
     color: #333;
     text-decoration: none;
@@ -49,18 +54,17 @@ nav {
     width: 15%;
     animation: slide-fromRight 1.5s;
 }
-nav .mobile-dropdown {
-    background-color: #666666;
-    display: inline-block;
-}
-nav .mobile-rect {
+#mobile-nav, #mobile-navwindow { display: none; }
+#mobile-nav .mobile-rect {
     width: 2em;
-    height: 0.1em;
+    height: 2px;
     background-color: white;
     margin: 0.3em 0.5em;
 }
-nav .mobile-dropdown :first-child { margin-top: 0.75em; }
-nav .mobile-dropdown :last-child { margin-bottom: 0.75em; }
+#mobile-nav :first-child { margin-top: 0.75em; }
+#mobile-nav :last-child { margin-bottom: 0.75em; }
+
+/* PAGE HEADER */
 
 header {
     display: flex;
@@ -69,16 +73,23 @@ header {
     align-items: baseline;
     padding-top: 1em;
     animation: slide-fromTop 1.5s;
+    font-size: 2em;
 }
-header h1 { margin-right: 2em; margin-left: 10%; display: inline-block; font-family: "Highway Gothic Wide", sans-serif; }
-.n1 { font-size: 2.5em; font-family: inherit; }
-.n2 { color: #29ABE2; font-size: 2.5em; margin-left: 0.25em; font-family: inherit; }
+header h1 { 
+    margin-right: 0.75em;
+    margin-left: 10%; 
+    display: inline-block; 
+    font-family: "Highway Gothic Wide", sans-serif;
+    font-weight: 100;
+}
+.n1 { font-family: inherit; }
+.n2 { color: #29ABE2; margin-left: 0.2em; font-family: inherit; }
 
 .animated-text {
     font-family: "Arial", sans-serif;
     font-size: 1em;
     padding: 1.5em 0;
-    margin: 0 2em 0 10%;
+    margin: 2em 2em 0 10%;
 }
 
 .animated-text h1 {
@@ -87,6 +98,7 @@ header h1 { margin-right: 2em; margin-left: 10%; display: inline-block; font-fam
 }
 #typewrite {
     font-size: 3em;
+    font-weight: 100;
 }
 
 #typewrite .cursor {
@@ -94,6 +106,8 @@ header h1 { margin-right: 2em; margin-left: 10%; display: inline-block; font-fam
     font-size: 1em;
     margin-left: 0.03em;
 }
+
+/* MAIN PAGE CONTENT */
 
 main {
     width: 80%;
@@ -105,8 +119,7 @@ main {
 .view-buttons {
     display: flex;
     flex-direction: row;
-    padding: 1em 0;
-    max-width: 80%;
+    flex-wrap: wrap;
     margin: 0 auto;
 }
 
@@ -116,42 +129,57 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0.8em auto;
     padding: 1em;
-    border-radius: 1.5em;
+    border-radius: 1.25em;
     color: white;
-    margin: 0 auto;
 }
 
-.view-buttons a i {
-    margin-left: 0.5em;
-}
+.view-buttons a i { margin-left: 0.5em; }
 
 #github { background-color: #333333; }
 #github:hover { background-color: #444444; }
-#resume { background-color: #0F81CC; }
+#resume, #projects a { background-color: #0F81CC; }
 #resume:hover { background-color: #2E92D3; }
 
-#projects { margin-top: 3em; }
+#projects .container { 
+    margin-top: 1em; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
 
-main section li {
+#projects a { 
+    text-align: left;
+    text-decoration: none; 
+    color: white;
+}
+
+main section article {
     background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 2em;
-    width: 90%;
+    max-width: 32em;
     margin: 1em auto;
-}
-
-main section li * {
-    padding: 0.5em 2em;
-}
-
-main section li h1 {
-    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
     font-family: 'Arial', sans-serif;
+    font-weight: 100;
 }
 
-main section h1 {
-    font-size: 2em;
+main section article h1 { font-size: 1em; padding: 1em 0 0 1.5em; }
+main section article p { font-size: 0.75em; padding: 0.75em 2em; }
+main section article a { font-size: 0.75em; padding: 1em 2em; }
+main section h1 { font-size: 2em; }
+
+#skillcloud {
+    display: block;
+    margin: 0 auto;
 }
+
+/* FOOTER */
 
 footer {
     background-color: #777777;
@@ -163,20 +191,30 @@ footer {
     color: white;
 }
 
-#copyright { padding-right: 1em; }
-#acknowledgements {
-    border-left: 0.01em white solid;
-    padding-left: 1em;
-}
-
 footer a {
     text-decoration: underline;
     color: white;
     font-size: inherit;
+    font-family: inherit;
 }
+
+#copyright { padding-right: 1em; }
+#acknowledgements {
+    border-left: 0.01em white solid;
+    padding-left: 1em;
+    font-size: 0.8em;
+}
+
+/* RULES SPECIFIC TO SCREEN SIZE */
 
 @media screen and (max-width: 1023px) {
     .n2 { margin-left: 0; }
+    #mobile-nav {
+        background-color: #666666;
+        display: inline-block;
+        padding: 0.5em;
+    }
+    #desktop-nav { display: none; }
 }
 
 @media screen and (max-width: 768px) {
