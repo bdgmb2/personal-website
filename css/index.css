@@ -25,6 +25,11 @@
     padding: 0;
 }
 
+a { 
+    text-decoration: none;
+    color: white; 
+}
+
 body {
     /*background-color: #fefdfb;*/
     background: url("../images/background.jpg");
@@ -116,6 +121,8 @@ main {
     min-height: 70vh;
 }
 
+main section { margin: 2em auto; }
+
 .view-buttons {
     display: flex;
     flex-direction: row;
@@ -125,14 +132,12 @@ main {
 
 .view-buttons a {
     text-align: center;
-    text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0.8em auto;
     padding: 1em;
     border-radius: 1.25em;
-    color: white;
 }
 
 .view-buttons a i { margin-left: 0.5em; }
@@ -143,7 +148,6 @@ main {
 #resume:hover { background-color: #2E92D3; }
 
 #projects .container { 
-    margin-top: 1em; 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -151,13 +155,9 @@ main {
     flex-shrink: 1;
 }
 
-#projects a { 
-    text-align: left;
-    text-decoration: none; 
-    color: white;
-}
+#projects a { text-align: left; }
 
-main section article {
+#projects article {
     background-color: rgba(255, 255, 255, 0.75);
     max-width: 32em;
     margin: 1em auto;
@@ -169,14 +169,67 @@ main section article {
     font-weight: 100;
 }
 
-main section article h1 { font-size: 1em; padding: 1em 0 0 1.5em; }
-main section article p { font-size: 0.75em; padding: 0.75em 2em; }
-main section article a { font-size: 0.75em; padding: 1em 2em; }
+#projects article h1 { font-size: 1em; padding: 1em 0 0 1.5em; }
+#projects article p { font-size: 0.75em; padding: 0.75em 2em; }
+#projects article a { font-size: 0.75em; padding: 1em 2em; }
 main section h1 { font-size: 2em; }
 
 #skillcloud {
     display: block;
     margin: 0 auto;
+    width: 100%;
+}
+
+#triangle {
+    display: none;
+    width: 0;
+    height: 0;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    border-bottom: 1em solid #0F81CC;
+    margin: 0.5em auto 0 auto;
+}
+
+#accordion-content {
+    display: none;
+    background-color: #0F81CC;
+    color: white;
+    padding: 1.5em 0;
+    margin: 0 auto 1em auto;
+    position: relative;
+    width: 100vw;
+    left: calc(-50vw + 50%);
+}
+
+#accordion-content article {
+    color: white;
+    width: 79%;
+    margin: 0 auto;
+}
+
+#accordion-content h1 { font-size: 1.5em; font-weight: bold; }
+#accordion-content p {
+    margin-top: 0.75em; 
+    font-size: 1em;
+}
+
+#contact ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1em 0;
+}
+
+#contact ul li {
+    display: inline-block;
+    background-color: #0F81CC;
+    color: white;
+    padding: 1em;
+}
+
+#contact ul li:hover {
+    background-color: #2E92D3;
 }
 
 /* FOOTER */

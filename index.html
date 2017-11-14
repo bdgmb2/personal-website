@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+<!--
+  This is the ASCII Duck of nice code.
+  You'll receive good marks on your exams
+  but only if you comment "Swim well ducko"
+    __
+___( o)>
+\ <_. )
+`---' 
+-->
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -80,27 +89,84 @@
         </section>
         <section id="skills">
             <h1>Stuff I Can Do:</h1>
-            <canvas id="skillcloud">
+            <canvas id="skillcloud" width="500" height="100">
                 <ul>
-                    <li><a>HTML</a></li>
-                    <li><a>CSS</a></li>
-                    <li><a>Javascript</a></li>
-                    <li><a>PHP</a></li>
-                    <li><a>Laravel</a></li>
-                    <li><a>Symfony</a></li>
-                    <li><a>C#</a></li>
-                    <li><a>ASP.NET</a></li>
-                    <li><a>Xamarin</a></li>
-                    <li><a>C++</a></li>
-                    <li><a>GTK+ Framework</a></li>
-                    <li><a>Python</a></li>
-                    <li><a>Amazon AWS</a></li>
-                    <li><a>Windows Server</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.html();">HTML/CSS/JS</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.php();">PHP</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.laravel();">Laravel</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.CSharp();">C#</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.ASP();">ASP.NET</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.xamarin();">Xamarin</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.CPlusPlus();">C++</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.GTK();">GTK+ Framework</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.python();">Python</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.linux();">Linux/UNIX</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.windows();">Windows Server</a></li>
+                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.video();">Video Production</a></li>
                 </ul>
             </canvas>
+            <section id="skillaccordion">
+                <div id="triangle"></div>
+                <div id="accordion-content">
+                    <article id="skill-html">
+                        <h1>HTML/CSS/JS</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-php">
+                        <h1>PHP</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-laravel">
+                        <h1>Laravel</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-CSharp">
+                        <h1>C#</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-ASP">
+                        <h1>ASP.NET</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-xamarin">
+                        <h1>Xamarin</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-CPlusPlus">
+                        <h1>C++</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-GTK">
+                        <h1>GTK+ Framework</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-python">
+                        <h1>Python</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-linux">
+                        <h1>Linux/UNIX</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-windows">
+                        <h1>Windows Server</h1>
+                        <p></p>
+                    </article>
+                    <article id="skill-video">
+                        <h1>Video Production</h1>
+                        <p></p>
+                    </article>
+                </div>
+            </section>
         </section>
         <section id="contact">
             <h1>Would You Like to Know More?</h1>
+            <p>You can reach me at:</p>
+            <ul class="contact-info">
+                <li>+353 (087)-113-4297 before December 2017</li>
+                <li>+1 (360)-953-9156 after December 2017</li>
+                <li><a href="mailto:ben@bengiles.me">ben@bengiles.me</a></li>
+            </ul>
         </section>
     </main>
     <footer>

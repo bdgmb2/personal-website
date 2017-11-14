@@ -44,6 +44,33 @@ function onMobileClick() {
     document.getElementById('mobile-navwindow').show();
 }
 
+var linkFunctions = {
+    hideAll: function() {
+        var accordionChildren = document.getElementById('accordion-content').children;
+        for (var i = 0; i < accordionChildren.length; i++) {
+            accordionChildren[i].style.display = 'none';
+        }
+    },
+    base: function(elem) { 
+        this.hideAll();
+        document.getElementById('triangle').style.display = 'block';
+        document.getElementById('accordion-content').style.display = 'block';
+        document.getElementById(elem).style.display = 'block';
+    },
+    html: function() { this.base('skill-html'); },
+    php: function() { this.base('skill-php');  },
+    laravel: function() { this.base('skill-laravel'); },
+    CSharp: function() { this.base('skill-CSharp'); },
+    ASP: function() { this.base('skill-ASP'); },
+    xamarin: function() { this.base('skill-xamarin'); },
+    CPlusPlus: function() { this.base('skill-CPlusPlus'); },
+    GTK: function() { this.base('skill-GTK'); },
+    python: function() { this.base('skill-python'); },
+    linux: function() { this.base('skill-linux'); },
+    windows: function() { this.base('skill-windows'); },
+    video: function() { this.base('skill-video'); }
+};
+
 window.onload = function() {
     var toRotate = document.getElementById('typewrite').getAttribute('data-type');
     if (toRotate) {
@@ -52,12 +79,18 @@ window.onload = function() {
 
     var scroll = new SmoothScroll('a[href*="#"]');
 
-    TagCanvas.textColour = "#0F81CC";
-    TagCanvas.textFont = "Highway Gothic, sans-serif";
-    TagCanvas.txtScale = 3;
-    TagCanvas.zoom = 2;
-    TagCanvas.wheelZoom = false;
-    TagCanvas.Start('skillcloud');
+    TagCanvas.Start('skillcloud', '', {
+        textColour: "#0F81CC",
+        textFont: "Highway Gothic, sans-serif",
+        wheelZoom: false,
+        shape: 'hcylinder',
+        txtOpt: true,
+        txtScale: 2,
+        textHeight: 10,
+        zoom: 1,
+        radiusX: 3
+    });
 
     document.getElementById('mobile-nav').click(onMobileClick);
+    linkFunctions.hideAll();
 };
