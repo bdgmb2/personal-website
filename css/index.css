@@ -96,16 +96,16 @@ header h1 {
     padding: 1.5em 0;
     margin: 2em 2em 0 10%;
 }
-
 .animated-text h1 {
     font-family: inherit;
     font-size: 1em;
 }
+
+
 #typewrite {
     font-size: 3em;
     font-weight: 100;
 }
-
 #typewrite .cursor {
     border-right: 0.03em solid #222;
     font-size: 1em;
@@ -120,8 +120,9 @@ main {
     margin-right: auto;
     min-height: 70vh;
 }
-
 main section { margin: 2em auto; }
+main section h1 { font-size: 2em; }
+
 
 .view-buttons {
     display: flex;
@@ -129,7 +130,6 @@ main section { margin: 2em auto; }
     flex-wrap: wrap;
     margin: 0 auto;
 }
-
 .view-buttons a {
     text-align: center;
     display: flex;
@@ -139,13 +139,14 @@ main section { margin: 2em auto; }
     padding: 1em;
     border-radius: 1.25em;
 }
-
 .view-buttons a i { margin-left: 0.5em; }
+
 
 #github { background-color: #333333; }
 #github:hover { background-color: #444444; }
 #resume, #projects a { background-color: #0F81CC; }
 #resume:hover { background-color: #2E92D3; }
+
 
 #projects .container { 
     display: flex;
@@ -154,9 +155,7 @@ main section { margin: 2em auto; }
     flex-wrap: wrap;
     flex-shrink: 1;
 }
-
 #projects a { text-align: left; }
-
 #projects article {
     background-color: rgba(255, 255, 255, 0.75);
     max-width: 32em;
@@ -168,17 +167,27 @@ main section { margin: 2em auto; }
     font-family: 'Arial', sans-serif;
     font-weight: 100;
 }
+#projects article figure {
+    padding: 1em 0 0 1.5em;
+    width: 35%;
+}
+#projects article figure img { max-width: 100%; }
+#projects article p {
+    font-size: 0.75em;
+    padding: 0.75em 2em;
+}
+#projects article a {
+    font-size: 0.75em;
+    padding: 1em 2em;
+}
 
-#projects article h1 { font-size: 1em; padding: 1em 0 0 1.5em; }
-#projects article p { font-size: 0.75em; padding: 0.75em 2em; }
-#projects article a { font-size: 0.75em; padding: 1em 2em; }
-main section h1 { font-size: 2em; }
 
 #skillcloud {
     display: block;
     margin: 0 auto;
     width: 100%;
 }
+
 
 #triangle {
     display: none;
@@ -190,6 +199,7 @@ main section h1 { font-size: 2em; }
     margin: 0.5em auto 0 auto;
 }
 
+
 #accordion-content {
     display: none;
     background-color: #0F81CC;
@@ -200,18 +210,20 @@ main section h1 { font-size: 2em; }
     width: 100vw;
     left: calc(-50vw + 50%);
 }
-
 #accordion-content article {
     color: white;
     width: 79%;
     margin: 0 auto;
 }
-
-#accordion-content h1 { font-size: 1.5em; font-weight: bold; }
+#accordion-content h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+}
 #accordion-content p {
     margin-top: 0.75em; 
     font-size: 1em;
 }
+
 
 #contact ul {
     list-style: none;
@@ -220,17 +232,14 @@ main section h1 { font-size: 2em; }
     justify-content: space-around;
     margin: 1em 0;
 }
-
 #contact ul li {
     display: inline-block;
     background-color: #0F81CC;
     color: white;
     padding: 1em;
 }
+#contact ul li:hover { background-color: #2E92D3; }
 
-#contact ul li:hover {
-    background-color: #2E92D3;
-}
 
 /* FOOTER */
 
@@ -243,13 +252,13 @@ footer {
     justify-content: center;
     color: white;
 }
-
 footer a {
     text-decoration: underline;
     color: white;
     font-size: inherit;
     font-family: inherit;
 }
+
 
 #copyright { padding-right: 1em; }
 #acknowledgements {
