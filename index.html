@@ -23,11 +23,11 @@ ___( o)>
 <body>
     <div class="view-container">
         <nav>
-            <div id="mobile-nav">
+            <a id="mobile-nav" onclick="onMobileClick()">
                 <div class="mobile-rect"></div>
                 <div class="mobile-rect"></div>
                 <div class="mobile-rect"></div>
-            </div>
+            </a>
             <ul id="desktop-nav">
                 <li><a data-scroll href="#about">About Me</a></li>
                 <li><a data-scroll href="#projects">Projects</a></li>
@@ -35,11 +35,11 @@ ___( o)>
                 <li><a data-scroll href="#contact">Contact Me</a></li>
             </ul>
             <div id="mobile-navwindow">
-                <ul>
-                    <li><a data-scroll href="#about">About Me</a></li>
-                    <li><a data-scroll href="#projects">Projects</a></li>
-                    <li><a data-scroll href="#skills">Skills</a></li>
-                    <li><a data-scroll href="#contact">Contact Me</a></li>
+                <ul id="mobile-navcontainer">
+                    <li><a data-scroll href="#about" onclick="dismissMobileClick()">About Me</a></li>
+                    <li><a data-scroll href="#projects" onclick="dismissMobileClick()">Projects</a></li>
+                    <li><a data-scroll href="#skills" onclick="dismissMobileClick()">Skills</a></li>
+                    <li><a data-scroll href="#contact" onclick="dismissMobileClick()">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -198,7 +198,7 @@ ___( o)>
         </article>
         <article id="acknowledgements">
             <p><small>Animated Text from <a href="https://codepen.io/hi-im-si">Simon Shahriveri</a>, MIT</small></p>
-            <p><small>Icons from <a href="https://fontawesome.com">FontAwesome</a></small>, MIT</p>
+            <p><small>Icons from <a href="https://fontawesome.com">FontAwesome</a>, MIT</small></p>
             <p><small>Web Cloud from <a href="https://goat1000.com">Graham Breach</a>, LGPLv3</small></p>
             <p><small>Smooth Scrolling from <a href="https://github.com/cferdinandi">Chris Ferdinandi</a>, MIT</small></p>
         </article>

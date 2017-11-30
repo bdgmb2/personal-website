@@ -41,7 +41,12 @@ TxtType.prototype.tick = function() {
 };
 
 function onMobileClick() {
-    document.getElementById('mobile-navwindow').show();
+    document.getElementById('mobile-navwindow').style.display = 'block';
+}
+
+function dismissMobileClick() {
+    document.getElementById('mobile-navwindow').style.display = 'none';
+    document.body.style.opacity = 1;
 }
 
 var linkFunctions = {
@@ -91,6 +96,5 @@ window.onload = function() {
         radiusX: 3
     });
 
-    document.getElementById('mobile-nav').click(onMobileClick);
     linkFunctions.hideAll();
 };

@@ -59,15 +59,38 @@ nav {
     width: 15%;
     animation: slide-fromRight 1.5s;
 }
-#mobile-nav, #mobile-navwindow { display: none; }
+#mobile-nav { display: none; }
+#mobile-nav :first-child { margin-top: 0.75em; }
+#mobile-nav :last-child { margin-bottom: 0.75em; }
 #mobile-nav .mobile-rect {
     width: 2em;
     height: 2px;
     background-color: white;
     margin: 0.3em 0.5em;
 }
-#mobile-nav :first-child { margin-top: 0.75em; }
-#mobile-nav :last-child { margin-bottom: 0.75em; }
+
+
+#mobile-navwindow {
+    display: none;
+    background: rgba(255, 255, 255, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#mobile-navcontainer {
+    background-color: #FFF;
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+    animation-name: slide-fromTop;
+    animation-duration: 0.5s;
+}
 
 /* PAGE HEADER */
 
@@ -237,6 +260,7 @@ main section h1 { font-size: 2em; }
     background-color: #0F81CC;
     color: white;
     padding: 1em;
+    margin: 0 0.25em;
 }
 #contact ul li:hover { background-color: #2E92D3; }
 
