@@ -1,207 +1,82 @@
 <!DOCTYPE html>
-<!--
-  This is the ASCII Duck of nice code.
-  You'll receive good marks on your exams
-  but only if you comment "Code well ducko"
-    __
-___( o)>
-\ <_. )
-`---' 
--->
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Ben Giles - Software Developer</title>
-    <meta name="description" content="Ben Giles is a software developer and student studying at the Missouri University of Science and Technology." />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <script type="text/javascript" src="js/scroll.js"></script>
-    <script type="text/javascript" src="js/site.js"></script>
-    <script type="text/javascript" src="js/tagcanvas.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" />
+    <link rel="stylesheet" href="css/pagesource.css" />
+    <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
-    <div class="view-container">
-        <nav>
-            <a id="mobile-nav" onclick="onMobileClick()">
-                <div class="mobile-rect"></div>
-                <div class="mobile-rect"></div>
-                <div class="mobile-rect"></div>
-            </a>
-            <ul id="desktop-nav">
-                <li><a data-scroll href="#about">About Me</a></li>
-                <li><a data-scroll href="#projects">Projects</a></li>
-                <li><a data-scroll href="#skills">Skills</a></li>
-                <li><a data-scroll href="#contact">Contact Me</a></li>
-            </ul>
-            <div id="mobile-navwindow">
-                <ul id="mobile-navcontainer">
-                    <li><a data-scroll href="#about" onclick="dismissMobileClick()">About Me</a></li>
-                    <li><a data-scroll href="#projects" onclick="dismissMobileClick()">Projects</a></li>
-                    <li><a data-scroll href="#skills" onclick="dismissMobileClick()">Skills</a></li>
-                    <li><a data-scroll href="#contact" onclick="dismissMobileClick()">Contact Me</a></li>
-                </ul>
-            </div>
+    <div id="hamburger">
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+        <div class="hamburger-bar"></div>
+        <nav id="vert-nav">
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
-        <header>
-            <h1><span class="n1">BEN</span>  <span class="n2">GILES</span></h1>
-            <p>Software Developer</p>
-        </header>
     </div>
-    <section class="animated-text">
-        <h1>I can do...</h1>
-        <h1 id="typewrite" data-type='[
-             "Embedded Programming",
-             "Web Development",
-             "Infosec Analysis",
-             "Mobile Development",
-             "Design Briefs",
-             "Project Management"
-             ]'>
-            <span class="cursor"></span>
-        </h1>
-    </section>
-    <main>
-        <section id="about">
-            <p>I'm Ben, a junior (3rd year) computer science student at the Missouri University of Science and Technology.
-                I'm an embedded software developer, primarily working in C++ in a Linux environment, although I dabble
-                in web development and have worked a lot in C# and ASP.NET in the past. Scroll down to see what I've
-                worked on and what I like to think I'm good at.</p>
-            <div class="view-buttons">
-                <a id="github" href="https://github.com/bdgmb2">View my Github <i class="fa fa-2x fa-github" aria-hidden="true"></i></a>
-                <a id="resume" href="/resume.pdf">Look at my Resume <i class="fa fa-2x fa-file-pdf-o" aria-hidden="true"></i></a>
-            </div>
+    <header>
+        <div class="left-header">
+            <h1>Ben</h1>
+        </div>
+        <div class="right-header">
+            <h1>Giles</h1>
+            <p>Software Developer</p>
+        </div>
+    </header>
+    <main class="container">
+        <section id="intro">
+            <h1>Hi.</h1>
+            <p>I'm Ben, a junior computer science student at the Missouri University of Science and Technology. I'm primarily an embedded software developer most comfortable in C++, but also proficient in web development technologies as well as C# and ASP.Net</p>
+            <p>Scroll down for stuff I've worked on, as well as my contact information.</p>
+        </section>
+        <div class="horiz-separator"></div>
+        <section id="links">
+            <a id="github-lnk" href="https://github.com/bdgmb2">View my Github <i class="fab fa-2x fa-github"></i></a>
+            <a id="res-lnk" href="https://bengiles.me/resume.pdf">Check out my Resume <i class="fas fa-2x fa-file-pdf"></i></a>
         </section>
         <section id="projects">
             <h1>Projects</h1>
-            <div class="container">
+            <div class="flex-container">
                 <article>
-                    <figure><img src="images/minerbytes.svg" alt="MinerBytes"></figure>
-                    <p>A complex digital signage system in use at the Missouri University of Science and Technology. I developed the client software for this solution: a secure, lightweight native binary running on a Raspberry Pi that communicates with a REST API to serve content to a commerical display.</p>
-                    <a class="goto" href="https://minerbytes.mst.edu">View Project</a>
+                    <img src="img/minerbytes.svg" alt="MinerBytes">
+                    <p>A complex digital signage system in use at the Missouri University of Science and Technology. I developed the client software for this solution: a secure, lightweight native binary designed to run on a Raspberry Pi that communicates with a REST API to serve content to a commercial display.</p>
+                    <a href="https://minerbytesv3.srv.mst.edu">View Project</a>
                 </article>
                 <article>
-                    <figure><img src="images/aireeen.png" alt="Air EEEN"></figure>
-                    <p>Originally starting out as a semester project for a university databases class, Air EEEN is a (fictional) airline website created with Laravel, and features flight booking, persistent accounts, realistic flight routes and an automated customer support phone system.</p>
-                    <a class="goto" href="https://bengiles.me/airline">View Project</a>
+                    <img src="img/aireeen.png" alt="Air EEEN">
+                    <p>Originally starting out as a semester project for a class on databases, Air EEEN is a (fictional) airline website created with Laravel and features flight booking, persistent user accounts, realistic flight routes and an automated customer support phone system.</p>
+                    <a href="https://bengiles.me/airline">View Project</a>
                 </article>
             </div>
         </section>
         <section id="skills">
             <h1>Stuff I Can Do:</h1>
-            <canvas id="skillcloud" width="500" height="100">
-                <ul>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.html();">HTML/CSS/JS</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.php();">PHP</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.laravel();">Laravel</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.CSharp();">C#</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.ASP();">ASP.NET</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.xamarin();">Xamarin</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.CPlusPlus();">C++</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.GTK();">GTK+ Framework</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.python();">Python</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.linux();">Linux/UNIX</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.windows();">Windows Server</a></li>
-                    <li><a data-scroll href="#accordion-content" onclick="linkFunctions.video();">Video Production</a></li>
-                </ul>
-            </canvas>
-            <section id="skillaccordion">
-                <div id="triangle"></div>
-                <div id="accordion-content">
-                    <article id="skill-html">
-                        <h1>HTML/CSS/JS</h1>
-                        <p></p>
-                    </article>
-                    <article id="skill-php">
-                        <h1>PHP</h1>
-                        <p>I don't get all the fuss about PHP. I really like PHP 7, and enjoy it's strict argument
-                        typing and performance improvements. Using a framework like Laravel or Symfony on top makes the
-                        language even better to prototype in, and - if given the choice - would prefer to make a web-app
-                        in PHP than ASP.NET.</p>
-                    </article>
-                    <article id="skill-laravel">
-                        <h1>Laravel</h1>
-                        <p>I love using this PHP framework for building REST-ready web applications, and it makes my
-                        code more readable and easier to document. You can find <a href="https://github.com/bdgmb2/aireeen">
-                        one project</a> on my GitHub that's done entirely in Laravel.</p>
-                    </article>
-                    <article id="skill-CSharp">
-                        <h1>C#</h1>
-                        <p>I've done a lot of work in this language, mostly in the .NET framework but some involving Mono
-                        on Unity and Xamarin.</p>
-                    </article>
-                    <article id="skill-ASP">
-                        <h1>ASP.NET</h1>
-                        <p>Most of my previous work experience involved some form of ASP.NET, whether it be creating a
-                        new web application (usually MVC) from the ground up, or adding new features to an existing
-                        project.</p>
-                    </article>
-                    <article id="skill-xamarin">
-                        <h1>Xamarin</h1>
-                        <p>Isn't it everyone's dream to build an iPhone or Android app? I considered learning Obj-C (and
-                        potentially now the new Swift) as well as Java to accomplish this, but I found leveraging my C#
-                        knowledge using Xamarin to build for both platforms at the same time to be much faster.</p>
-                    </article>
-                    <article id="skill-CPlusPlus">
-                        <h1>C++</h1>
-                        <p>The first language I learned anything in is also the language I primarily use at my current
-                        university job. Everyone's got their personal C++ variant, mine is C++11. No, I don't need
-                        libBoost to get anything done either.</p>
-                    </article>
-                    <article id="skill-GTK">
-                        <h1>GTK+ Framework</h1>
-                        <p>When building a GUI on Linux, you're kind of herded into two choices: Qt or the open-source
-                        GTK framework. Seeing as Qt charges for commercial use, at work I've often opted to program GUI
-                        applications in C or C++ in this somewhat large framework.</p>
-                    </article>
-                    <article id="skill-python">
-                        <h1>Python</h1>
-                        <p>Ah, the language where everything is pseudocode. I've used Python (specifically Python 3) for
-                        a lot of university projects and some AI competitions I've participated in. Although my heart is
-                        still with C++, I will often use Python to prototype or create a proof-of-concept.</p>
-                    </article>
-                    <article id="skill-linux">
-                        <h1>Linux/UNIX</h1>
-                        <p>Some days it takes me twice to type "sudo" correctly, but the other days are much better. I
-                        can navigate around a terminal and have a pretty intermediate knowledge of Linux and POSIX
-                        compliant systems as well. Some would call me a heathen, but I prefer nano.</p>
-                    </article>
-                    <article id="skill-windows">
-                        <h1>Windows Server</h1>
-                        <p>Might as well learn the other side of the server-software coin. I've got plenty of experience
-                        maintaining Active Directory and Group Policy, as well as running a remote gateway host and some
-                        of the fancier Microsoft-esque features. I'm OK at PowerShell (with a handy cheat-sheet close by)
-                        when necessary.</p>
-                    </article>
-                    <article id="skill-video">
-                        <h1>Video Production</h1>
-                        <p>I know my way around Premiere Pro and After Effects, and can certainly edit and post-process
-                        a video. While I <em>can't</em> do any of the crazy stuff you've probably seen in After Effects,
-                        I can walk clients through the production process and shoot and edit video as necessary.</p>
-                    </article>
-                </div>
-            </section>
+            <div id="wordcloud"></div>
         </section>
         <section id="contact">
             <h1>Would You Like to Know More?</h1>
-            <p>You can reach me at:</p>
-            <ul class="contact-info">
-                <li>+353 (087)-113-4297 before December 2017</li>
-                <li>+1 (360)-953-9156 after December 2017</li>
-                <li>ben(at)bengiles(dot)me</li>
-            </ul>
+            <p>You can contact me at:</p>
+            <div class="flex-container">
+                <p class="contact-button">+1 (360) 953-9156</p>
+                <p class="contact-button">ben(at)bigcountrybg(dot)com</p>
+            </div>
         </section>
     </main>
     <footer>
-        <article id="copyright">
-            <p>&copy; 2017 Ben Giles</p>
-        </article>
-        <article id="acknowledgements">
-            <p><small>Animated Text from <a href="https://codepen.io/hi-im-si">Simon Shahriveri</a>, MIT</small></p>
-            <p><small>Icons from <a href="https://fontawesome.com">FontAwesome</a>, MIT</small></p>
-            <p><small>Web Cloud from <a href="https://goat1000.com">Graham Breach</a>, LGPLv3</small></p>
-            <p><small>Smooth Scrolling from <a href="https://github.com/cferdinandi">Chris Ferdinandi</a>, MIT</small></p>
-        </article>
+        <section class="footer-left">
+            <p>&copy; 2018 Ben Giles</p>
+        </section>
+        <section class="footer-right">
+            <p>Icons from <a href="https://fontawesome.com">FontAwesome</a>, CC 4.0</p>
+            <p>Skill Word Cloud from <a href="https://github.com/timdream/wordcloud2.js/">TimDream</a>, MIT</p>
+            <p><a href="https://github.com/bdgmb2/personal-website">View Page Source</a>, MIT</p>
+        </section>
     </footer>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
