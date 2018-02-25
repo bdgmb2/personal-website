@@ -27,12 +27,15 @@
             ['Redis', 3],
             ['Apache', 3],
             ['Powershell', 3],
-            ['Python', 3]
+            ['Python', 3],
+            ['GTK+', 3],
+            ['Git', 3],
+            ['MySQL', 3]
         ],
         gridSize: Math.round(16 * width / 1024),
         fontWeight: 'lighter',
         weightFactor: function (size) {
-            return Math.pow(size, 3) * width / 1024;
+            return Math.pow(size, 3.2);
         },
         fontFamily: 'Roboto Slab, serif',
         color: '#000',
