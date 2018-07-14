@@ -23,6 +23,7 @@
             ['HTML/CSS/JS', 3],
             ['UNIX/Linux', 3],
             ['SQL', 3],
+            ['IIS', 3],
             ['Video Production', 3],
             ['Redis', 3],
             ['Apache', 3],
@@ -30,7 +31,10 @@
             ['Python', 3],
             ['GTK+', 3],
             ['Git', 3],
-            ['MySQL', 3]
+            ['Angular', 3],
+            ['React', 3],
+            ['AWS', 3],
+            ['Bash', 3]
         ],
         gridSize: Math.round(16 * width / 1024),
         fontWeight: 'lighter',
