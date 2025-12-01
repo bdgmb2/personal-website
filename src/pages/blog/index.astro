@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Blog.astro';
+const posts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
+---
+
+<Layout>
+  {posts.sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
+    .slice(0, 5).map((post) => (
+    <article class="mb-8">
+      <h2 class="text-3xl font-bold mb-2">
+        <a href={post.url} class="text-blue-600 hover:underline">{post.frontmatter.title}</a>
+      </h2>
+      <p class="text-gray-600 mb-4">{new Date(post.frontmatter.date).toLocaleDateString()}</p>
+      <p class="text-gray-800">{post.frontmatter.shortDescription}</p>
+    </article>
+  ))}
+</Layout>

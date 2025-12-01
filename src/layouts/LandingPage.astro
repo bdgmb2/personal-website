@@ -1,0 +1,179 @@
+---
+import '../styles/global.css';
+import LinkedInImage from '../assets/linkedin-logo.png';
+import GithubImage from '../assets/github-mark-white.png';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Giles - Software Developer</title>
+  </head>
+  <body>
+    <div class="mainpage-background">
+      <div class="shape-container">
+        <div class="shapes shape1" />
+        <div class="shapes shape2" />
+        <div class="shapes shape3" />
+      </div>
+    </div>
+
+    <div class="w-full h-screen grid grid-cols-8 shadow-3xl">
+      <div class="bg col-span-6 h-screen flex flex-col items-center overflow-hidden">
+        <div class="flex flex-col justify-center items-center h-screen gap-10">
+          <header class="bg-inline-block flex flex-col place-content-center gap-3">Z
+            <h1 class="text-8xl c">Ben Giles</h1>
+            <h2 class="text-4xl c">Senior Software Engineer</h2>
+          </header>
+          <main class="px-35 py-10 flex flex-col items-center gap-8">
+            <a class="button button-primary px-8 py-5" href="/resume.pdf"><p class="font-bold text-center">View My Resume</p></a>
+            <a class="button px-8 py-4" href="#"><p class="font-bold text-center">Read My Blog</p></a>
+            <span class="flex w-50 justify-evenly">
+              <a class="" href="https://www.linkedin.com/in/ben-giles-599927390/"><img class="w-8 inline" src={LinkedInImage.src} alt="LinkedIn Logo"></a>
+              <a class="" href="https://github.com/bdgmb2"><img class="w-8 inline" src={GithubImage.src} alt="LinkedIn Logo"></a>
+            </span>
+          </main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+  body {
+    --main-color: #02aaf1;
+    --bg-color: #081b29;
+    --shape-color: #ddf3ff;
+  }
+
+  h1, h2, p, a {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  .c {
+    color: #fff;
+  }
+.button-primary {
+  background-color: #fff;
+  border: none !important;
+}
+.bg {
+  background-color: var(--bg-color);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
+}
+.button {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 1rem;
+}
+.button:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  border: 2px solid rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.button-primary:hover {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+}
+
+.mainpage-background {
+  position: absolute;
+  z-index: -10;
+  background-color: var(--bg-color);
+  height: 100vh;
+  width: 100%;  
+  overflow: hidden;
+}
+
+.shape-container {
+  filter: blur(1000px);
+}
+
+@keyframes move1 {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  30% {
+    transform: translate(20vw, 30vh);
+  }
+  70% {
+    transform: translate(10vw, 50vh);
+  }
+  100% {
+    transform: translate(0vw, 0vh);
+  }
+}
+
+@keyframes move2 {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  20% {
+    transform: translate(-30vw, -20vh);
+  }
+  60% {
+    transform: translate(-40vw, -70vh);
+  }
+  100% {
+    transform: translate(0vw, 0vh);
+  }
+}
+
+@keyframes move3 {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+  45% {
+    transform: translate(10vw, 50vh);
+  }
+  80% {
+    transform: translate(-5vw, 10vh);
+  }
+  100% {
+    transform: translate(0vw, 0vh);
+  }
+}
+
+.shapes {
+  --circle-width: calc(15vh + 20vw);
+  --speed: 20s;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  position: absolute;
+  clip-path: circle(var(--circle-width));
+  width: calc(var(--circle-width) * 2);
+  mix-blend-mode: overlay;
+}
+
+.shape1 {
+  /* clip-path: polygon(50.9% 37.2%, 43.5% 34.7%, 33.6% 26.1%, 39.2% 10.8%, 26.2% 0.0%, 4.8% 6.4%, 0.0% 30.4%, 20.7% 37.2%, 33.4% 26.3%, 43.2% 34.9%, 45.0% 35.6%, 43.6% 46.4%, 37.8% 59.5%, 21.8% 63.2%, 11.7% 76.1%, 22.9% 91.3%, 47.4% 91.3%, 54.0% 79.0%, 38.0% 59.6%, 43.9% 46.4%, 45.2% 35.5%, 50.9% 37.6%, 56.1% 36.8%, 59.8% 47.6%, 70.3% 61.9%, 87.7% 56.0%, 96.4% 37.4%, 88.6% 15.1%, 63.7% 16.7%, 55.2% 33.6%, 55.9% 36.6%, 50.9% 37.2%) */
+  top: 0vh;
+  left: -25vw;
+  animation: move1 var(--speed) ease-in-out infinite reverse;
+  background: var(--shape-color);
+}
+
+.shape2 {
+  top: 50vh;
+  left: 80vw;
+  animation: move2 var(--speed) ease-in-out infinite reverse;
+  background: var(--shape-color);
+}
+
+.shape3 {
+  top: 0vh;
+  left: 30vw;
+  animation: move3 var(--speed) ease-in-out infinite reverse;
+  background: var(--shape-color);
+}
+</style>
+

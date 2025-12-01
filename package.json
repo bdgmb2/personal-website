@@ -1,17 +1,18 @@
 {
   "name": "personal-website",
-  "version": "1.0.2",
-  "description": "Ben Giles Personal Website",
-  "main": "index.js",
-  "repository": "https://github.com/bdgmb2/personal-website.git",
-  "author": "Ben Giles",
-  "license": "MIT",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-cli": "^2.0.1",
-	"gulp-concat": "^2.6.1",
-    "gulp-csso": "^3.0.1",
-    "gulp-less": "^3.5.0",
-    "gulp-uglify": "^3.0.0"
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "cf-preview": "wrangler dev",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.12",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.16.3",
+    "tailwindcss": "^4.1.17"
   }
 }
